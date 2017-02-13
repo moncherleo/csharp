@@ -73,6 +73,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="test\classwork\lesson02\" />
+    <Folder Include="test\classwork\lesson06\" />
     <Folder Include="test\resources\" />
   </ItemGroup>
   <ItemGroup>
