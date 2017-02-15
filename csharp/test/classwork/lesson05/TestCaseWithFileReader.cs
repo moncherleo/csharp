@@ -1,4 +1,5 @@
-﻿using csharp.Properties;
+﻿using csharp.main.utils;
+using csharp.Properties;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
@@ -8,9 +9,13 @@ using System.Threading.Tasks;
 
 namespace csharp.test.classwork.lesson05
 {
+    //This helper is not ready
     [TestFixture]
-    class TestCaseWithPreconditions
+    class TestCaseWithFileReader
     {
+        TestDataProvider expectedResultTestData = new TestDataProvider();
+        static int[][][] expectedResultsArray;
+
         private string inputDataPath = Resources.PathToResources + "input.txt";
         private string expectedResultPath = Resources.PathToResources + "expected.txt";
         private static int[] inputData = null;
@@ -19,17 +24,19 @@ namespace csharp.test.classwork.lesson05
         [OneTimeSetUp] // input data the same for all tests_    
         public void OneTimeSetUp()
         {
-            expectedResults = ReadRowOfIntegers(expectedResultPath);
+            int [][] expectedArray = TestDataProvider.ReadTestData("");
+            expectedResultsArray[0] = expectedArray;
+            expectedResultTestData.setArrayOfIntArrays(expectedArray);
         }
 
         [SetUp]
         public void SetUp()
         {
-            inputData = ReadRowOfIntegers(inputDataPath);
+            expectedResultTestData.getNextIntArray();
         }
 
-        [Test]
-        public void FirstTest()
+        [TestCaseSource("DivideCases")]
+        public void FirstTest(int expectedArray)
         {
             Console.WriteLine("Simple sorting test");
             Array.Sort(inputData);
@@ -57,32 +64,5 @@ namespace csharp.test.classwork.lesson05
         {
             expectedResults = null;
         }
-
-        public static int[] ReadRowOfIntegers(string fileName)
-        {
-            int counter = 0;
-            int[] intArray;
-            string[] stringArray = new string[100];
-            string line;
-            // Read the file and display it line by line.
-            System.IO.StreamReader file = new System.IO.StreamReader(fileName);
-            while ((line = file.ReadLine()) != null)
-            {
-                stringArray[counter] = line;
-                counter++;
-            }
-            file.Close();
-
-            // Suspend the screen.
-            string[] splittedString = stringArray[0].Split(',');
-            intArray = new int[splittedString.Length];
-            for (int i = 0; i < splittedString.Length; i++)
-            {
-                intArray[i] = Convert.ToInt32(splittedString[i]);
-            }
-            return intArray;
-        }
-
-
     }
 }

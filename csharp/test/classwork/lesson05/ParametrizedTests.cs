@@ -9,10 +9,10 @@ namespace csharp.test.classwork.lesson05
 {
     class ParametrizedTests
     {
-        static object[] DivideCases = {
-        new object[] { 12, 3, 4 },
-        new object[] { 12, 2, 6 },
-        new object[] { 12, 4, 3 }
+        static int[][] DivideCases = {
+        new int[] { 12, 3, 4 },
+        new int[] { 12, 2, 6 },
+        new int[] { 12, 4, 3 }
         };
 
         [TestCaseSource("DivideCases")]
@@ -20,6 +20,5 @@ namespace csharp.test.classwork.lesson05
         {
             Assert.AreEqual(q, n / d);
         }
-
     }
 }

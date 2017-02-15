@@ -56,6 +56,8 @@
     <Compile Include="main\classwork\lesson04\Calculators.cs" />
     <Compile Include="main\homework\lesson02\PrimitiveConvertor.cs" />
     <Compile Include="main\menus\Lesson04Menu.cs" />
+    <Compile Include="main\utils\SystemVariables.cs" />
+    <Compile Include="main\utils\TestDataProvider.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -65,7 +67,7 @@
     </Compile>
     <Compile Include="test\classwork\lesson03\MathFuncTest.cs" />
     <Compile Include="test\classwork\lesson05\ParametrizedTests.cs" />
-    <Compile Include="test\classwork\lesson05\TestCaseWithPreconditions.cs" />
+    <Compile Include="test\classwork\lesson05\TestCaseWithFileReader.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -74,7 +76,6 @@
   <ItemGroup>
     <Folder Include="test\classwork\lesson02\" />
     <Folder Include="test\classwork\lesson06\" />
-    <Folder Include="test\resources\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
@@ -84,6 +85,10 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="test\resources\expected.txt" />
+    <Content Include="test\resources\input.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
