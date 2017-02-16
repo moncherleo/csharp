@@ -1,0 +1,4 @@
+csharp.test.classwork.lesson03.MathFuncTest.MultiplyTest
+csharp.test.classwork.lesson03.MathFuncTest.DivisionTest
+csharp.test.classwork.lesson03.MathFuncTest.AdditionTest
+csharp.test.classwork.lesson03.MathFuncTest.SubstractionTest
