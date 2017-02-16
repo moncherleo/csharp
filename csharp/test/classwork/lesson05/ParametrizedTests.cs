@@ -9,13 +9,13 @@ namespace csharp.test.classwork.lesson05
 {
     class ParametrizedTests
     {
-        static int[][] DivideCases = {
+        static int[][] divideCases = {
         new int[] { 12, 3, 4 },
         new int[] { 12, 2, 6 },
         new int[] { 12, 4, 3 }
         };
 
-        [TestCaseSource("DivideCases")]
+        [TestCaseSource("divideCases")]
         public void DivideTest(int n, int d, int q)
         {
             Assert.AreEqual(q, n / d);
