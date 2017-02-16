@@ -1,4 +1,5 @@
 ﻿using csharp.main.classwork.lesson02;
+using csharp.main.classwork.lesson06;
 using csharp.main.menus;
 using System;
 using System.Collections.Generic;
@@ -13,7 +14,10 @@ namespace csharp
     {
         static void Main(string[] args)
         {
-            Lesson04Menu.Menu();
+            Loopers loopers = new Loopers();
+            loopers.ArrayLooper();
+
+            Console.ReadKey();
         }
     }
 }
