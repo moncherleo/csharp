@@ -8,41 +8,57 @@ using System.Threading.Tasks;
 
 namespace csharp.test.classwork.lesson03
 {
-    [TestFixture]
     class MathFuncTest
     {
-        [Test]
-        public void MultiplyTest() {
-            int a = 1, b = 2, expRes = 2;
-            MathFunc mathFunc = new MathFunc();
+        MathFunc mathFunc;
 
-            Assert.AreEqual(expRes, mathFunc.Multiply(a, b));
+        [OneTimeSetUp]
+        public void OneTimeSetUp() {
+            mathFunc = new MathFunc();
         }
 
-        [Test]
-        public void DivisionTest()
-        {
-            int a = 6, b = 2, expRes = 3;
-            MathFunc mathFunc = new MathFunc();
+        static object[][] multiplyData = {
+        new object[] { 12, 3, 4, true },
+        new object[] { 12, 2, 6, true },
+        new object[] { 12, 2, 5, false },
+        };
 
+        static object[][] divisionData = {
+        new object[] { 12, 3, 4 },
+        new object[] { 10, 4, 2.5 }
+        };
+
+        static object[][] additionData = {
+        new object[] { 12, 12, 24 },
+        new object[] { -2, 4, 2 }
+        };
+
+        static object[][] substractionData = {
+        new object[] { 12, 12, 0 },
+        new object[] { -2, -4, 2 }
+        };
+
+        [Test, TestCaseSource("multiplyData")]
+        public void MultiplyTest(int a, int b, int expRes, bool booleanResult) {
+            Assert.AreEqual(booleanResult, expRes == mathFunc.Multiply(a, b));
+        }
+
+        [Test, TestCaseSource("divisionData")]
+        [Ignore("I would not to run this test because of")]
+        public void DivisionTest(int a, int b, double expRes)
+        {
             Assert.AreEqual(expRes, mathFunc.Division(a, b));
         }
 
-        [Test]
-        public void AdditionTest()
+        [Test, TestCaseSource("additionData")]
+        public void AdditionTest(int a, int b, int expRes)
         {
-            int a = -1, b = 2, expRes = 1;
-            MathFunc mathFunc = new MathFunc();
-
             Assert.AreEqual(expRes, mathFunc.Addition(a, b));
         }
 
-        [Test]
-        public void SubstractionTest()
+        [Test, TestCaseSource("substractionData")]
+        public void SubstractionTest(int a, int b, int expRes)
         {
-            int a = 2, b = -1, expRes = 3;
-            MathFunc mathFunc = new MathFunc();
-
             Assert.AreEqual(expRes, mathFunc.Substraction(a, b));
         }
     }

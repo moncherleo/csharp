@@ -12,7 +12,8 @@ namespace csharp.test.classwork.lesson05
         static int[][] divideCases = {
         new int[] { 12, 3, 4 },
         new int[] { 12, 2, 6 },
-        new int[] { 12, 4, 3 }
+        new int[] { 12, 4, 3 },
+        new int[] { 12, 4, 9 }
         };
 
         [TestCaseSource("divideCases")]
