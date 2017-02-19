@@ -17,10 +17,15 @@ namespace csharp.test.classwork.lesson03
             mathFunc = new MathFunc();
         }
 
+        [Test, Timeout(10000)]
+        public void InfinityTest() {
+            while (true);
+        }
+
         static object[][] multiplyData = {
-        new object[] { 12, 3, 4, true },
-        new object[] { 12, 2, 6, true },
-        new object[] { 12, 2, 5, false },
+        new object[] { 12, 3, 36, true },
+        new object[] { 12, 2, 24, true },
+        new object[] { 12, 2, 25, false },
         };
 
         static object[][] divisionData = {
