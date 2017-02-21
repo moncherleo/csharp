@@ -12,17 +12,18 @@ namespace csharp
 {
     class Program
     {
+        static int[] array1 = { 1, 2, 3 };
+
         static void Main(string[] args)
         {
-
-            for (int i = 0; i <= 10; i = i + 2) {
-                Console.Write(i + " ");
-            }
-
+            Arrays arrays = new Arrays();
+            arrays.Multi();
             Console.ReadKey();
 
-            Loopers loopers = new Loopers();
-            loopers.ArrayLooper();
+            arrays.Jagged();
+
+            //Loopers loopers = new Loopers();
+            //loopers.ArrayLooper();
 
             Console.ReadKey();
         }
