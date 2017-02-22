@@ -10,6 +10,11 @@ namespace csharp.main.classwork.lesson06
     {
         public void Jagged()
         {
+            int[,] a = {{1,2,3},
+            {4,5,6},
+            {7,8,9}};
+
+
             int[][] array2 = new int[2][];
             for (int i = 0; i < array2.Length; i++)
             {
@@ -29,18 +34,14 @@ namespace csharp.main.classwork.lesson06
 
         public void Multi()
         {
-            int[,] array2 = new int[2, 3];
-
-            for (int j = 0; j < 2; j++)
+            int[,] arr = new int[2, 3];
+            for (int j = 0; j<arr.GetLength(0); j++)
             {
-                for (int k = 0; k < 3; k++)
+                for (int k = 0; k<arr.GetLength(1); k++)
                 {
-                    array2[j, k] = (j + 1) * (k + 1);
-                    Console.Write(array2[j, k] + " ");
+                    arr[j, k] = (j + 1) * (k + 1);
                 }
-                Console.WriteLine();
             }
         }
-
     }
 }

@@ -16,7 +16,16 @@ namespace csharp
 
         static void Main(string[] args)
         {
+            int[,] arr = new int[4, 3];
+            if (arr.Rank > 1)
+            {
+                for (int dim = 0; dim < arr.Rank; dim++)
+                    Console.WriteLine("Dim {0}: {1}", dim, arr.GetLength(dim));
+            }
+            Console.ReadKey();
+
             Arrays arrays = new Arrays();
+
             arrays.Multi();
             Console.ReadKey();
 
