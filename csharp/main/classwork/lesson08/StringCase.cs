@@ -17,7 +17,14 @@ namespace csharp.main.classwork.lesson08
                 stringToDisplay += charArrayToString[i];
             }
 
-            Console.WriteLine(stringToDisplay);
+            stringToDisplay = "";
+            foreach (char ch1 in charArrayToString) {
+                stringToDisplay += ch1;
+            }
+
+            ulong l1 = Convert.ToUInt64("1234567890123456");
+
+            Console.WriteLine(l1);
             return stringToDisplay;
 
         }

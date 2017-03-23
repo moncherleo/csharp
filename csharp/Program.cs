@@ -17,7 +17,7 @@ namespace csharp
 
         static void Main(string[] args)
         {
-            StringCase.IsPalindrome();
+            StringCase.Stringer();
 
             /*
              
