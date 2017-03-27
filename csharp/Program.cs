@@ -1,6 +1,7 @@
 ﻿using csharp.main.classwork.lesson02;
 using csharp.main.classwork.lesson06;
 using csharp.main.classwork.lesson08;
+using csharp.main.classwork.lesson09;
 using csharp.main.menus;
 using System;
 using System.Collections.Generic;
@@ -16,10 +17,23 @@ namespace csharp
         static int[] array1 = { 1, 2, 3 };
 
         static void Main(string[] args)
-        {
-            StringOperations strOps = new StringOperations();
-            strOps.StringOps();
-            
+        { 
+            FilesAndExceptions fex = new FilesAndExceptions();
+            fex.FileWriter();
+            /*  try
+             {
+                 fex.GetNumber(5);
+             }
+             catch (IndexOutOfRangeException e)
+             {
+                 Console.WriteLine(e.Message);
+             }
+             finally {
+                 Console.ReadKey();
+             }
+             */
+
+
 
             /*
              

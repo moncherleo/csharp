@@ -80,15 +80,15 @@ namespace csharp.main.classwork.lesson08
                 cnt += 1;
                 idx = strt;
             }
-            MessageBox.Show(srchString + " occurs " + cnt + " times");
+            //MessageBox.Show(srchString + " occurs " + cnt + " times");
 
 
             strModified = strOriginal.Insert(26, "very ");
-            MessageBox.Show(strModified);
+            //MessageBox.Show(strModified);
 
 
             strModified = strOriginal.Replace("come handy", "be useful");
-            MessageBox.Show(strModified);
+            //MessageBox.Show(strModified);
 
         }
     }
