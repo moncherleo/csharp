@@ -57,6 +57,7 @@
     <Compile Include="main\classwork\lesson06\Arrays.cs" />
     <Compile Include="main\classwork\lesson06\Loopers.cs" />
     <Compile Include="main\classwork\lesson08\StringCase.cs" />
+    <Compile Include="main\classwork\lesson08\StringOperations.cs" />
     <Compile Include="main\homework\lesson02\PrimitiveConvertor.cs" />
     <Compile Include="main\menus\Lesson04Menu.cs" />
     <Compile Include="main\utils\SystemVariables.cs" />

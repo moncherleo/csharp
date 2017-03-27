@@ -17,7 +17,9 @@ namespace csharp
 
         static void Main(string[] args)
         {
-            StringCase.Stringer();
+            StringOperations strOps = new StringOperations();
+            strOps.StringOps();
+            
 
             /*
              
