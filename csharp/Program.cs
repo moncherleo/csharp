@@ -2,6 +2,8 @@
 using csharp.main.classwork.lesson06;
 using csharp.main.classwork.lesson08;
 using csharp.main.classwork.lesson09;
+using csharp.main.classwork.lesson11;
+using csharp.main.classwork.lesson12;
 using csharp.main.menus;
 using System;
 using System.Collections.Generic;
@@ -17,21 +19,43 @@ namespace csharp
         static int[] array1 = { 1, 2, 3 };
 
         static void Main(string[] args)
-        { 
-            FilesAndExceptions fex = new FilesAndExceptions();
-            fex.FileWriter();
-            /*  try
-             {
-                 fex.GetNumber(5);
-             }
-             catch (IndexOutOfRangeException e)
-             {
-                 Console.WriteLine(e.Message);
-             }
-             finally {
-                 Console.ReadKey();
-             }
-             */
+        {
+
+            Student student = new Student("Egor", "KPI");
+            Console.WriteLine(student.GetResponse("What is class?"));
+            Teacher teacher = new Teacher("Ivan", "NAU");
+            Console.WriteLine(teacher.GetResponse("What time is now?"));
+            /* - - - - - - - - - - - - - - - - - - - - - - - */
+            Person person = new Student("Ilya", "LNU");
+            Console.WriteLine(person.GetResponse("What is class?"));
+
+            person = new Teacher("Evgeniy", "HPI");
+            Console.WriteLine(person.GetResponse("What time is now?"));
+
+            /* 
+            Pixel pixel = new Pixel(2, 5);
+           int[] pixCoords = pixel.GetCoords();
+           Console.WriteLine(pixCoords[0] + ", " + pixCoords[1]);
+
+           Student student = new Student("John", "MIT");
+           Console.WriteLine(student.GetResponse("WTF?")); 
+           Console.ReadKey();
+           */
+
+           /* FilesAndExceptions fex = new FilesAndExceptions();
+           fex.FileWriter();
+           try
+            {
+                fex.GetNumber(5);
+            }
+            catch (IndexOutOfRangeException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally {
+                Console.ReadKey();
+            }
+            */
 
 
 

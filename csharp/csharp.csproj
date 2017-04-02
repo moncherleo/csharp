@@ -59,6 +59,12 @@
     <Compile Include="main\classwork\lesson08\StringCase.cs" />
     <Compile Include="main\classwork\lesson08\StringOperations.cs" />
     <Compile Include="main\classwork\lesson09\FilesAndExceptions.cs" />
+    <Compile Include="main\classwork\lesson11\Person.cs" />
+    <Compile Include="main\classwork\lesson11\Student.cs" />
+    <Compile Include="main\classwork\lesson11\Teacher.cs" />
+    <Compile Include="main\classwork\lesson12\Display.cs" />
+    <Compile Include="main\classwork\lesson12\Pixel.cs" />
+    <Compile Include="main\classwork\lesson12\PhoneNumber.cs" />
     <Compile Include="main\homework\lesson02\PrimitiveConvertor.cs" />
     <Compile Include="main\menus\Lesson04Menu.cs" />
     <Compile Include="main\utils\SystemVariables.cs" />
