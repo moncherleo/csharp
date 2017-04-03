@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace csharp.main.classwork.lesson02
 {
-    class Bicycle
+    class Bicycle_simple
     {
         public int cadence = 0;
 

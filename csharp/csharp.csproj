@@ -47,7 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="main\classwork\lesson02\Bicycle.cs" />
+    <Compile Include="main\classwork\lesson02\Bicycle_simple.cs" />
     <Compile Include="main\classwork\lesson02\NarrowingCasting.cs" />
     <Compile Include="main\classwork\lesson02\WideningCasting.cs" />
     <Compile Include="main\classwork\lesson03\MathFunc.cs" />
@@ -59,6 +59,7 @@
     <Compile Include="main\classwork\lesson08\StringCase.cs" />
     <Compile Include="main\classwork\lesson08\StringOperations.cs" />
     <Compile Include="main\classwork\lesson09\FilesAndExceptions.cs" />
+    <Compile Include="main\classwork\lesson11\Bicycle.cs" />
     <Compile Include="main\classwork\lesson11\Person.cs" />
     <Compile Include="main\classwork\lesson11\Student.cs" />
     <Compile Include="main\classwork\lesson11\Teacher.cs" />

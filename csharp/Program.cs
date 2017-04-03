@@ -20,6 +20,15 @@ namespace csharp
 
         static void Main(string[] args)
         {
+            Bicycle bicycle = new Bicycle();
+            bicycle.Ride();
+            bicycle = new Bicycle(28);
+            bicycle.Ride();
+            bicycle = new Bicycle(24, "green");
+            bicycle.Ride();
+
+            Console.ReadKey();
+
 
             Student student = new Student("Egor", "KPI");
             Console.WriteLine(student.GetResponse("What is class?"));
