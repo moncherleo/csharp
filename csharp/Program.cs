@@ -4,6 +4,7 @@ using csharp.main.classwork.lesson08;
 using csharp.main.classwork.lesson09;
 using csharp.main.classwork.lesson11;
 using csharp.main.classwork.lesson12;
+using csharp.main.classwork.lesson13;
 using csharp.main.menus;
 using System;
 using System.Collections.Generic;
@@ -20,6 +21,11 @@ namespace csharp
 
         static void Main(string[] args)
         {
+            IBicycle bicycle1 = new ACMEBicycle();
+            bicycle1.changeCadence(1);
+            ACMEBicycle acmeBicycle = new ACMEBicycle();
+            acmeBicycle.printStates();
+
             Bicycle bicycle = new Bicycle();
             bicycle.Ride();
             bicycle = new Bicycle(28);

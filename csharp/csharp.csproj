@@ -66,6 +66,11 @@
     <Compile Include="main\classwork\lesson12\Display.cs" />
     <Compile Include="main\classwork\lesson12\Pixel.cs" />
     <Compile Include="main\classwork\lesson12\PhoneNumber.cs" />
+    <Compile Include="main\classwork\lesson13\ACMEBicycle.cs" />
+    <Compile Include="main\classwork\lesson13\Circle.cs" />
+    <Compile Include="main\classwork\lesson13\Figure.cs" />
+    <Compile Include="main\classwork\lesson13\IBicycle.cs" />
+    <Compile Include="main\classwork\lesson13\Rectangle.cs" />
     <Compile Include="main\homework\lesson02\PrimitiveConvertor.cs" />
     <Compile Include="main\menus\Lesson04Menu.cs" />
     <Compile Include="main\utils\SystemVariables.cs" />
