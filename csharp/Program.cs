@@ -5,6 +5,7 @@ using csharp.main.classwork.lesson09;
 using csharp.main.classwork.lesson11;
 using csharp.main.classwork.lesson12;
 using csharp.main.classwork.lesson13;
+using csharp.main.classwork.lesson14;
 using csharp.main.menus;
 using System;
 using System.Collections.Generic;
@@ -21,6 +22,10 @@ namespace csharp
 
         static void Main(string[] args)
         {
+            DictionaryExample dictEx = new DictionaryExample();
+            dictEx.DictEx();
+            Console.ReadKey();
+
             IBicycle bicycle1 = new ACMEBicycle();
             bicycle1.changeCadence(1);
             ACMEBicycle acmeBicycle = new ACMEBicycle();
