@@ -24,7 +24,7 @@ namespace csharp.main.classwork.lesson11
         }
         public string Ride()
         {   // method  
-            Console.WriteLine("Bicycle color is " + color + " size is " + wheelSize);     
+            Console.WriteLine("Bicycle color is " + color + ", size is " + wheelSize);     
             return "Wroom!";
         }
     }
