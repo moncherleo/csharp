@@ -109,6 +109,7 @@
     <Compile Include="test\webdriver\pageobject\LoginPage.cs" />
     <Compile Include="test\webdriver\pageobject\NewsPage.cs" />
     <Compile Include="test\webdriver\tests\BasePOTest.cs" />
+    <Compile Include="test\webdriver\tests\massagetherapy\MassageTherapyRegistrationSmokeTests.cs" />
     <Compile Include="test\webdriver\tests\PageObjectLikeTest.cs" />
   </ItemGroup>
   <ItemGroup>
