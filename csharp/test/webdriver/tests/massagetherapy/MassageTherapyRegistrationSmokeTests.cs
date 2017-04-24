@@ -16,8 +16,8 @@ namespace csharp.test.webdriver.tests.massagetherapy
     class MassageTherapyRegistrationSmokeTests
     {
         IWebDriver driver;
-        String baseUrl = "http://moncherleo.github.io/";
-        const String thankYouMessageText = "Thank You!";
+        public const String baseUrl = "http://moncherleo.github.io/";
+        protected const String thankYouMessageText = "Thank You!";
 
         By firstName = By.XPath(".//input[contains(@id,'first')]");
         By middleName = By.XPath(".//input[contains(@id,'middle')][@type='text']");
