@@ -19,5 +19,10 @@ namespace csharp.test.webdriver.tests.massagetherapyPO.pages
             Assert.AreEqual(thankYouMessageText, driver.FindElement(thankYouMessage).Text);
             return this;
         }
+
+        public FormPage ReturnFormPage()
+        {
+            return new FormPage(driver);
+        }
     }
 }

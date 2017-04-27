@@ -25,30 +25,33 @@ namespace csharp.test.webdriver.tests.massagetherapyPO.pages
         public FormPage(IWebDriver driver) : base (driver) {}
 
         public FormPage FillFirstAndMiddleAndLastNamesAs(String firstName, String middleName, String lastName) {
-            webElement = driver.FindElement(firstNameInput);
-            webElement.Clear();
-            webElement.SendKeys(firstName);
-
-            webElement = driver.FindElement(middleNameInput);
-            webElement.Clear();
-            webElement.SendKeys(middleName);
-
-            webElement = driver.FindElement(lastNameInput);
-            webElement.Clear();
-            webElement.SendKeys(lastName);
+            SetValueToTextField(firstName, firstNameInput);
+            SetValueToTextField(middleName, middleNameInput);
+            SetValueToTextField(lastName, lastNameInput);
             return this;
         }
 
         public FormPage FillStreet1AndStreet2AddressesAs(string streetLine1Name, string streetLine2Name)
         {
-            FillInputFieldWith(streetAddressLine1Input, streetLine1Name);
-            FillInputFieldWith(streetAddressLine2Input, streetLine2Name);
+            SetValueToTextField(streetLine1Name, streetAddressLine1Input);
+            SetValueToTextField(streetLine2Name, streetAddressLine2Input);
             return this;
         }
 
-        public FormPage FillCityAndStateAs() { }
+        public FormPage FillCityAndStateAs(String cityName, String stateName) {
+            SetValueToTextField(cityName, cityNameInput);
+            SetValueToTextField(stateName, stateProvinceInput);
+            return this;
+        }
+
+        public FormPage FillPostalCodeAndCountryAs(String postalCode, String country) {
+            SetValueToTextField(postalCode, postalZipCodeInput);
+            SelectTextFromDropDownList(country, countryDDL);
+            return this;
+        }
 
         public ThankYouPage SubmitFormData() {
+            ClickOn(submitButton);
             return new ThankYouPage(driver);
         }
     }
